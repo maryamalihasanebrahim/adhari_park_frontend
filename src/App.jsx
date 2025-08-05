@@ -6,9 +6,10 @@ import { useState, useEffect } from "react"
 import Rides from "./components/Rides"
 import Navbar from "./components/Navbar"
 import { Routes, Route } from "react-router-dom"
-import Form from './components/Booking'
-import RideDetails from './components/RideDetails'
-Routes
+import Form from "./components/Booking"
+import RideDetails from "./components/RideDetails"
+import ViewBookings from "./components/ViewBookings"
+
 function App() {
   const [user, setUser] = useState(null)
 
@@ -30,6 +31,7 @@ function App() {
     localStorage.clear()
   }
 
+  console.log({ user })
   return (
     <>
       <Navbar user={user} handleLogout={handleLogOut} />
@@ -38,12 +40,9 @@ function App() {
           <Route path="/rides" element={<Rides />} />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register setUser={setUser} />} />
-          <Route path="/rides" element={<Rides />}></Route>
-          <Route
-            path="/rides/:id"
-            element={<RideDetails />}
-          />
+          <Route path="/rides/:id" element={<RideDetails />} />
           <Route path="/bookings/new/:id" element={<Form user={user}/>}/>
+          <Route path="/bookings" element={<ViewBookings />} />
         </Routes>
       </main>
     </>
