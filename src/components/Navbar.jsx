@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom"
 
 const Navbar = ({ user, handleLogout }) => {
@@ -7,6 +6,7 @@ const Navbar = ({ user, handleLogout }) => {
     userOptions = (
       <nav>
         <Link to="/rides">Rides</Link>
+        <Link to="/Bookings">View Bookings</Link>
         <Link onClick={handleLogout} to="/login">
           Logout
         </Link>
@@ -23,4 +23,3 @@ const Navbar = ({ user, handleLogout }) => {
   return <header>{user ? userOptions : publicOptions}</header>
 }
 export default Navbar
-
