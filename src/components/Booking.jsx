@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { useParams, useNavigate } from "react-router-dom"
+import "../styles/bookingForm.css"
 
 const Form = ({ user }) => {
   const navigate = useNavigate()
@@ -50,28 +51,23 @@ const Form = ({ user }) => {
 
   return (
     <>
-      <h3>booking</h3>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="rideChosen">
-          ride: <p>{ride}</p>
-        </label>
-        <label htmlFor="time">select time</label>
-        <br />
-        <input type="time" name="time" onChange={handleChange} />
-        <br />
-        <br />
-        <label htmlFor="date">date</label>
-        <br />
-        <input type="date" name="date" onChange={handleChange} />
-        <br />
-        <br />
-        <label htmlFor="persons">persons</label>
-        <br />
-        <input type="number" name="persons" onChange={handleChange} />
-        <br />
-        <br />
-        <button type="submit">book</button>
-      </form>
+      <div className="form">
+        <h3>Book A Ride!</h3>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="rideChosen">
+            Ride: <p>{ride}</p>
+          </label>
+          <label htmlFor="time">Select time</label>
+          <input type="time" name="time" onChange={handleChange} />
+
+          <label htmlFor="date">Date</label>
+          <input type="date" name="date" onChange={handleChange} />
+          <label htmlFor="persons">Persons</label>
+          <input type="number" name="persons" onChange={handleChange} />
+
+          <button type="submit">Book</button>
+        </form>
+      </div>
     </>
   )
 }

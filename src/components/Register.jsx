@@ -76,6 +76,7 @@ const Register = () => {
             required
           />
         </div>
+
         <button
           disabled={
             !formValues.email ||
@@ -85,8 +86,8 @@ const Register = () => {
         >
           Register
         </button>
+        <p>{formValues.valid}</p>
       </form>
-      <p>{formValues.valid}</p>
     </div>
   )
 }

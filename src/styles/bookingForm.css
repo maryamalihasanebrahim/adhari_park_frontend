@@ -1,0 +1,67 @@
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  width: 100%;
+  color: #333;
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+form input:focus {
+  outline: none;
+  border-color: pink;
+}
+
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgb(252, 215, 222);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+form button:hover {
+  background-color: pink;
+}
+
+form label p {
+  display: inline;
+  font-weight: normal;
+  margin-left: 0.5rem;
+  color: #666;
+}
