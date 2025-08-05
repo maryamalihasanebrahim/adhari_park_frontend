@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import TestComponent from './TestComponent'
 
 const ViewBookings = () => {
   const [bookings, setBookings] = useState([])
@@ -10,6 +11,9 @@ const ViewBookings = () => {
     const onMount = async () => {
       const response = await axios.get(`http://localhost:3001/bookings`)
       setBookings(response.data)
+
+      const theRides = await axios.get(`http://localhost:3001/rides`)
+      setRides(theRides.data)
     }
 
     onMount()
@@ -22,12 +26,7 @@ const ViewBookings = () => {
       <h2>All bookings:</h2> <br></br>
       {bookings &&
         bookings.map((booking) => (
-          <li key={booking.id}>
-            {booking.date.toString().substring(0, 10)}
-            <Link to={`/Bookings/${booking._id}`}>
-              <p> more Details...</p>
-            </Link>
-          </li>
+          <TestComponent key={booking.id} booking={booking} rides={rides} />
         ))}
     </ul>
   )
