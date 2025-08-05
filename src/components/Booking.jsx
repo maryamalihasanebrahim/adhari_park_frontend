@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 const Form = () => {
+  let { id } = useParams()
   const intialState = {
     date: '',
     time: '',
@@ -17,17 +19,17 @@ const Form = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    // const response = await axios.post(
-    //   'http://localhost:3000/bookings/new',
-    //   formState
-    // )
-    // console.log(response)
+    const response = await axios.post(
+      'http://localhost:3000/bookings/new',
+      formState
+    )
+    console.log(response)
   }
 
   useEffect(() => {
     const onMount = async () => {
-      let response = await axios.get('http://localhost:3000/rides')
-      response ? setRide(response.data[0].name) : console.log('loading...')
+      let response = await axios.get(`http://localhost:3000/rides/${id}`)
+      response ? setRide(response.data.name) : console.log('loading...')
     }
     onMount()
   }, [])
@@ -37,7 +39,7 @@ const Form = () => {
       <h3>booking</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="rideChosen">
-          ride:  <p>{ride}</p>
+          ride: <p>{ride}</p>
         </label>
         <label htmlFor="time">select time</label>
         <br />
