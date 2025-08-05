@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+body {
+  font-family: 'Parkinsans', sans-serif;
+  margin: 0px;
+}
+
+.nav {
+  background-color: #70cdbb;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 0px;
+}
+
+.navDiv {
+  font-weight: 500;
+  color: #241403;
+  text-decoration: none;
+  justify-self: center;
+}
