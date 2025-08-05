@@ -2,33 +2,44 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-const Form = () => {
+const Form = ({ user }) => {
   let { id } = useParams()
   const intialState = {
     date: '',
     time: '',
-    persons: ''
+    persons: 0
   }
+
+  console.log('FORM', user)
 
   const [ride, setRide] = useState(null)
   const [formState, setFormState] = useState(intialState)
 
   const handleChange = async (event) => {
-    setFormState({ ...formState, [event.target.name]: event.target.value })
+    setFormState({
+      ...formState,
+      [event.target.name]: event.target.value
+    })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const response = await axios.post(
-      'http://localhost:3000/bookings/new',
-      formState
-    )
+    console.log({
+      ...formState,
+      rideId: id,
+      userId: user.id
+    })
+    const response = await axios.post('http://localhost:3001/bookings/new', {
+      ...formState,
+      rideId: id,
+      userId: user.id
+    })
     console.log(response)
   }
 
   useEffect(() => {
     const onMount = async () => {
-      let response = await axios.get(`http://localhost:3000/rides/${id}`)
+      let response = await axios.get(`http://localhost:3001/rides/${id}`)
       response ? setRide(response.data.name) : console.log('loading...')
     }
     onMount()
@@ -53,7 +64,7 @@ const Form = () => {
         <br />
         <label htmlFor="persons">persons</label>
         <br />
-        <input type="number" name="number" min={1} onChange={handleChange} />
+        <input type="number" name="persons" onChange={handleChange} />
         <br />
         <br />
         <button type="submit">book</button>

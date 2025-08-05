@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import Form from './Booking'
 import { Link } from 'react-router-dom'
@@ -8,7 +7,7 @@ const Rides = () => {
   const [rides, setRides] = useState([])
   useEffect(() => {
     const onMount = async () => {
-      let response = await axios.get('http://localhost:3000/rides')
+      let response = await axios.get('http://localhost:3001/rides')
       response ? setRides(response.data) : console.log('loading...')
     }
     onMount()
@@ -17,9 +16,11 @@ const Rides = () => {
   return (
     <>
       {rides.map((ride) => (
-        <Link to={`${ride._id}`}>
-          <p key={ride._id}>{ride.name}</p>
-        </Link>
+        <ul key={ride._id}>
+          <Link to={`${ride._id}`}>
+            <li>{ride.name}</li>
+          </Link>
+        </ul>
       ))}
     </>
   )
