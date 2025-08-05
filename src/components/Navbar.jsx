@@ -1,17 +1,26 @@
-import { NavLink } from 'react-router-dom'
 
-const Nav = () => {
-  return (
-    <nav className="navbar">
-      <h4>may waterpark</h4>
-      <div>
-        <NavLink to="/log out">log out</NavLink>
-        <br />
-        <NavLink to="/rides">rides</NavLink>
-        <br />
-      </div>
+import { Link } from "react-router-dom"
+
+const Navbar = ({ user, handleLogout }) => {
+  let userOptions
+  if (user) {
+    userOptions = (
+      <nav>
+        <Link to="/rides">Rides</Link>
+        <Link onClick={handleLogout} to="/login">
+          Logout
+        </Link>
+      </nav>
+    )
+  }
+  const publicOptions = (
+    <nav>
+      <Link to="/rides">Rides</Link>
+      <Link to="/register">Register</Link>
+      <Link to="/login">Login</Link>
     </nav>
   )
+  return <header>{user ? userOptions : publicOptions}</header>
 }
+export default Navbar
 
-export default Nav
