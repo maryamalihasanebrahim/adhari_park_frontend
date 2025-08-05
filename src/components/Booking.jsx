@@ -1,16 +1,17 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useState, useEffect } from "react"
+import axios from "axios"
+import { useParams, useNavigate } from "react-router-dom"
 
 const Form = ({ user }) => {
+  const navigate = useNavigate()
   let { id } = useParams()
   const intialState = {
-    date: '',
-    time: '',
-    persons: 0
+    date: "",
+    time: "",
+    persons: 0,
   }
 
-  console.log('FORM', user)
+  console.log("FORM", user)
 
   const [ride, setRide] = useState(null)
   const [formState, setFormState] = useState(intialState)
@@ -18,7 +19,7 @@ const Form = ({ user }) => {
   const handleChange = async (event) => {
     setFormState({
       ...formState,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     })
   }
 
@@ -27,20 +28,22 @@ const Form = ({ user }) => {
     console.log({
       ...formState,
       rideId: id,
-      userId: user.id
+      userId: user.id,
     })
-    const response = await axios.post('http://localhost:3001/bookings/new', {
+    const response = await axios.post("http://localhost:3001/bookings/new", {
       ...formState,
       rideId: id,
-      userId: user.id
+      userId: user.id,
     })
+    navigate("/bookings")
+
     console.log(response)
   }
 
   useEffect(() => {
     const onMount = async () => {
       let response = await axios.get(`http://localhost:3001/rides/${id}`)
-      response ? setRide(response.data.name) : console.log('loading...')
+      response ? setRide(response.data.name) : console.log("loading...")
     }
     onMount()
   }, [])

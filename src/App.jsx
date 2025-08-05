@@ -9,11 +9,10 @@ import { Routes, Route } from "react-router-dom"
 import Form from "./components/Booking"
 import RideDetails from "./components/RideDetails"
 import ViewBookings from "./components/ViewBookings"
+import ViewBooking from "./components/ViewBooking"
 
 function App() {
   const [user, setUser] = useState(null)
-
-  console.log("APP", user)
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -31,7 +30,6 @@ function App() {
     localStorage.clear()
   }
 
-  console.log({ user })
   return (
     <>
       <Navbar user={user} handleLogout={handleLogOut} />
@@ -41,8 +39,9 @@ function App() {
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register setUser={setUser} />} />
           <Route path="/rides/:id" element={<RideDetails />} />
-          <Route path="/bookings/new/:id" element={<Form user={user}/>}/>
+          <Route path="/bookings/new/:id" element={<Form user={user} />} />
           <Route path="/bookings" element={<ViewBookings />} />
+          <Route path="/bookings/:id" element={<ViewBooking />} />
         </Routes>
       </main>
     </>
