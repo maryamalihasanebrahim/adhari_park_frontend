@@ -12,6 +12,8 @@ Routes
 function App() {
   const [user, setUser] = useState(null)
 
+  console.log("APP", user)
+
   const checkToken = async () => {
     const user = await CheckSession()
     setUser(user)
@@ -41,7 +43,7 @@ function App() {
             path="/rides/:id"
             element={<RideDetails />}
           />
-          <Route path="/bookings/new/:id" element={<Form />}/>
+          <Route path="/bookings/new/:id" element={<Form user={user}/>}/>
         </Routes>
       </main>
     </>

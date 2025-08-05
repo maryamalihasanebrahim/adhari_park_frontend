@@ -10,14 +10,12 @@ const RideDetails = () => {
 
   useEffect(() => {
     const onMount = async () => {
-      const response = await axios.get(`http://localhost:3000/rides/${id}`)
+      const response = await axios.get(`http://localhost:3001/rides/${id}`)
 
       response ? setChosenRide(response.data) : console.log('loading...')
     }
     onMount()
   }, [])
-
-
 
   return (
     <>
@@ -30,9 +28,8 @@ const RideDetails = () => {
       <p>minimum height {chosenRide.min_height} cm</p>
 
       <Link to={`/bookings/new/${id}`}>
-      <button>book ride</button>
+        <button>book ride</button>
       </Link>
-
     </>
   )
 }
