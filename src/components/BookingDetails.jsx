@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const TestComponent = ({ booking, rides }) => {
+const BookingDetails = ({ booking, rides }) => {
   return (
     <>
       <li >
@@ -18,4 +18,4 @@ const TestComponent = ({ booking, rides }) => {
     </>
   )
 }
-export default TestComponent
+export default BookingDetails

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import TestComponent from './TestComponent'
+import BookingDetails from './BookingDetails'
 
 const ViewBookings = () => {
   const [bookings, setBookings] = useState([])
@@ -26,7 +26,7 @@ const ViewBookings = () => {
       <h2>All bookings:</h2> <br></br>
       {bookings &&
         bookings.map((booking) => (
-          <TestComponent key={booking.id} booking={booking} rides={rides} />
+          <BookingDetails key={booking.id} booking={booking} rides={rides} />
         ))}
     </ul>
   )
