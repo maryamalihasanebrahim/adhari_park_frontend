@@ -26,16 +26,17 @@ const ViewBooking = () => {
     navigate('/bookings')
   }
 
-  if (!booking) return <div>Loading...</div>
+  if (!booking) return <div>loading...</div>
 
   return (
     <div>
-      <h2>Booking Details</h2>
-      <p>Ride: {rideName}</p>
-      <p>Date: {booking.date.toString().substring(0, 10)}</p>
-      <p>Time: {booking.time}</p>
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={() => navigate('/bookings')}>Back</button>
+      <h2>booking details</h2>
+      <p>ride: {rideName}</p>
+      <p>date: {booking.date.toString().substring(0, 10)}</p>
+      <p>time: {booking.time}</p>
+      <p>booking for {booking.persons} person(s)</p>
+      <button onClick={handleDelete}>cancel</button>
+      <button onClick={() => navigate('/bookings')}>back</button>
     </div>
   )
 }

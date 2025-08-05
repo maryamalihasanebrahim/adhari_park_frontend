@@ -12,7 +12,7 @@ const TestComponent = ({ booking, rides }) => {
         <br />
         {booking.date.toString().substring(0, 10)}
         <Link to={`/Bookings/${booking._id}`}>
-          <p> more Details...</p>
+          <p> more details...</p>
         </Link>
       </li>
     </>
