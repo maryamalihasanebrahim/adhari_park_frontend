@@ -6,15 +6,15 @@ const Navbar = ({ user, handleLogout }) => {
     userOptions = (
       <nav className="nav">
         <Link className="navDiv" to="/rides">
-          Rides
+          rides
         </Link>
 
         <Link className="navDiv" to="/Bookings">
-          View Bookings
+          my bookings
         </Link>
 
         <Link className="navDiv" onClick={handleLogout} to="/login">
-          Logout
+          log out
         </Link>
       </nav>
     )
@@ -22,12 +22,12 @@ const Navbar = ({ user, handleLogout }) => {
   const publicOptions = (
     <nav className="nav">
       <Link className="navDiv" to="/rides">
-        Rides
+        rides
       </Link>
 
-      <Link to="/register" className="navDiv" >Register</Link>
+      <Link to="/register" className="navDiv" >register</Link>
 
-      <Link to="/login" className="navDiv" >Login</Link>
+      <Link to="/login" className="navDiv" >login</Link>
     </nav>
   )
   return <header>{user ? userOptions : publicOptions}</header>

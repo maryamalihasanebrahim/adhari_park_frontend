@@ -6,7 +6,7 @@ const BookingDetails = ({ booking, rides }) => {
       <li >
         {rides.map((ride) => {
           if (ride._id == booking.rideId){
-          return ride.name
+          return ride.name.toLowerCase()
           }
         })}
         <br />

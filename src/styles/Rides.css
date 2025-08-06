@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+  background-color: #fffefd;
+}
+.BitCoaster {
+  background: url('src/images/ride_1.png');
+  /* background-color: red; */
+}
+
+.Bubble {
+  background: url('../images/ride_1.png');
+}
+
+ul {
+  list-style: none;
+}
+
+/* img {
+  width: 500px;
+  height: 550px;
+} */
+
+#group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px;
+}
+
+.image-container {
+  width: 500px;
+  height: 550px;
+  transition: transform 0.3s ease;
+}
+.image-container:hover {
+  opacity: 50%;
+  transform: scale(1.1);
+}
+
+#rideName {
+  font-weight: 500;
+  color: #412406;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.featured {
+  font-weight: 700;
+  color: #412406;
+  font-size: 25px;
+  align-self: center;
+  grid-area: 1 / 1;
+  padding-left: 90px;
+}
+
+.ribbon {
+  height: 70px;
+  margin: 30px;
+  grid-area: 1 / 1;
+  align-items: center;
+}
+
+#button {
+  border: none;
+  background-color: #70cdbb;
+  font-size: 21px;
+  color: #fffcfc;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Nunito';
+  border-radius: 9px;
+}
+
+#button:hover {
+  border: none;
+  opacity: 50%;
+}
+.details {
+  margin: 30px;
+  background-color: #faf2e5;
+  padding: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 9px;
+  font-size: 20px;
+}
+
+

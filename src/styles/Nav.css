@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
-  font-family: 'Parkinsans', sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin: 0px;
 }
 
@@ -18,4 +18,5 @@ body {
   color: #241403;
   text-decoration: none;
   justify-self: center;
+  font-size: 19px;
 }

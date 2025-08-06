@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import BookingDetails from './BookingDetails'
+import '../styles/Bookings.css'
 
 const ViewBookings = () => {
   const [bookings, setBookings] = useState([])
@@ -19,11 +20,11 @@ const ViewBookings = () => {
     onMount()
   }, [])
 
-  if (!bookings) return <div>Loading...</div>
+  if (!bookings) return <div>loading...</div>
 
   return (
     <ul>
-      <h2>All bookings:</h2> <br></br>
+      <h2>my bookings </h2> <br></br>
       {bookings &&
         bookings.map((booking) => (
           <BookingDetails key={booking.id} booking={booking} rides={rides} />
