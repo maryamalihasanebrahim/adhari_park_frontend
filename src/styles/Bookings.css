@@ -1,0 +1,65 @@
+/* .img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.rides-box {
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+  justify-content: start;
+} */
+
+.booking-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rides-box {
+  display: flex;
+  align-items: flex-start; /* aligns content to the top */
+  background-color: #fffefd;
+  padding: 30px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  margin-right: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.name,
+.date,
+.moredetails {
+  margin-bottom: 12px;
+}
+
+.name p {
+  font-size: 20px;
+  color: #000000;
+  margin: 0;
+}
+
+.date {
+  font-size: 18px;
+  color: #000000;
+}
+
+.moredetails {
+  background-color: #bfe7e5;
+  padding: 10px 16px;
+  width: fit-content;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.moredetails:hover {
+  background-color: #62cdcf;
+}
+
