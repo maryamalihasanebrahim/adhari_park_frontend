@@ -69,27 +69,35 @@ ul {
 
 #button {
   border: none;
-  background-color: #70cdbb;
+  background-color: #70cdba87;
   font-size: 21px;
   color: #fffcfc;
   font-weight: 600;
   cursor: pointer;
   font-family: 'Nunito';
   border-radius: 9px;
+  align-self: center;
 }
 
 #button:hover {
   border: none;
-  opacity: 50%;
+  background-color: #70cdbad1;
 }
-.details {
+#details {
   margin: 30px;
   background-color: #faf2e5;
-  padding: 30px;
+  padding: 60px;
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 9px;
   font-size: 20px;
+  display: grid;
+  grid-template-rows: 1fr 20px;
 }
 
 
+#bookingButton {
+  align-self: center;
+  justify-items: center;
+  justify-content: center;
+}

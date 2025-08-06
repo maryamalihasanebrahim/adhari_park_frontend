@@ -20,7 +20,8 @@ const RideDetails = () => {
 
   return (
     <>
-      <div className="details">
+      <div id="details">
+        <div id='information'>
         <h3>{chosenRide.name}</h3>
         <h4>{chosenRide.description}</h4>
         <p>price: BHD {chosenRide.price}</p>
@@ -28,9 +29,12 @@ const RideDetails = () => {
         <p>{chosenRide.location}</p>
         <p>{chosenRide.max_persons} people maximum</p>
         <p>minimum height {chosenRide.min_height} cm</p>
+        </div>
+        <div id='bookingButton'>
         <Link to={`/bookings/new/${id}`}>
           <button id="button">book</button>
         </Link>
+        </div>
       </div>
     </>
   )
