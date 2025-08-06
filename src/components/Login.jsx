@@ -23,8 +23,7 @@ const Login = ({ setUser }) => {
 
   return (
     <div className="col signin">
-      <img src="/images/signin.png" alt="Sign In" />
-      <form className="col" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="input-wrapper">
           <label htmlFor="email">Email</label>
           <input

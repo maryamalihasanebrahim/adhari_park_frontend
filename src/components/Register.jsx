@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
-
+import "../styles/auth.css"
 const Register = () => {
   let navigate = useNavigate()
   const initialState = {
@@ -76,6 +76,7 @@ const Register = () => {
             required
           />
         </div>
+
         <button
           disabled={
             !formValues.email ||
@@ -85,8 +86,8 @@ const Register = () => {
         >
           Register
         </button>
+        <p>{formValues.valid}</p>
       </form>
-      <p>{formValues.valid}</p>
     </div>
   )
 }

@@ -3,14 +3,21 @@
 body {
   font-family: 'Nunito', sans-serif;
   margin: 0px;
+  padding-top: 60px;
 }
 
 .nav {
   background-color: #70cdbb;
   padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navDiv {
