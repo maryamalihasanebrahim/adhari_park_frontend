@@ -51,7 +51,6 @@ const Rides = () => {
                   />
                 )}
               </div>
-              <li id="rideName">{ride.name.toLowerCase()}</li>
             </Link>
           </ul>
         ))}

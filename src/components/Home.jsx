@@ -1,11 +1,20 @@
-import { useNavigate } from "react-router-dom"
-
+import { useNavigate } from 'react-router-dom'
+import '../styles/home.css'
 const Home = () => {
   const navigate = useNavigate()
   return (
     <>
-      <p> home page</p>
-      <button onClick={() => navigate("/login")}>login!</button>
+      <div id="home">
+        <h1>WELCOME TO AMY!</h1>
+        <p className="quote">
+          born from the sparkle of Alya, the heart of Maryam, and the joy of
+          Yara
+        </p>
+        <button id="loginButton" onClick={() => navigate('/login')}>
+          <img src="./src/images/ticket.png" alt="" width="50px" />
+
+        </button>
+      </div>
     </>
   )
 }

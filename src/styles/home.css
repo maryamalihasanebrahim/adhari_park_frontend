@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+#home {
+  font-family: 'Nunito', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('src/images/map banner.png');
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loginButton {
+  font-family: 'Nunito', sans-serif;
+  color: #fffdfa;
+  font-size: 20px;
+  background-color: #e6b6d1;
+}
+
+#loginButton:hover {
+  background-color: #e69ac5;
+}
+
+h1 {
+  color: #241403;
+}
+
+.quote {
+  color: #241403;
+  font-weight: bold;
+  font-size: 20px;
+}
