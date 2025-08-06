@@ -5,6 +5,9 @@ const Navbar = ({ user, handleLogout }) => {
   if (user) {
     userOptions = (
       <nav className="nav">
+        <Link to="/" className="navDiv">
+          home
+        </Link>
         <Link className="navDiv" to="/rides">
           rides
         </Link>
