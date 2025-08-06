@@ -46,25 +46,21 @@ ul {
 
 .title {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
+  place-items: center;
+  margin: 30px;
+}
+
+.ribbon {
+  height: 70px;
+  width: auto;
+  grid-area: 1 / 1;
 }
 
 .featured {
   font-weight: 700;
   color: #412406;
   font-size: 25px;
-  align-self: center;
   grid-area: 1 / 1;
-  padding-left: 90px;
-}
-
-.ribbon {
-  height: 70px;
-  margin: 30px;
-  grid-area: 1 / 1;
-  align-items: center;
 }
 
 #button {
@@ -77,6 +73,11 @@ ul {
   font-family: "Nunito";
   border-radius: 9px;
   align-self: center;
+}
+
+#button:hover {
+  border: none;
+  background-color: #70cdbad1;
 }
 
 .ride-details {
@@ -103,7 +104,7 @@ ul {
 
 .book-btn {
   display: block;
-  background: #70cdba;
+  background: pink;
   color: white;
   border-radius: 9px;
   text-decoration: none;

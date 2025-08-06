@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
@@ -6,6 +6,7 @@ import Form from "./Booking"
 import "../styles/Rides.css"
 
 const RideDetails = () => {
+  let navigate = useNavigate()
   const [chosenRide, setChosenRide] = useState("")
   let { id } = useParams()
 
@@ -31,9 +32,12 @@ const RideDetails = () => {
           <p>minimum height {chosenRide.min_height} cm</p>
         </div>
         <div id="bookingButton">
-          <Link to={`/bookings/new/${id}`}>
-            <button className="book-btn">book</button>
-          </Link>
+          <button
+            className="book-btn"
+            onClick={() => navigate(`/bookings/new/${id}`)}
+          >
+            book
+          </button>
         </div>
       </div>
     </>
