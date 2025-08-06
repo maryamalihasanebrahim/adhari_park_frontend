@@ -12,8 +12,6 @@ const Form = ({ user }) => {
     persons: 0,
   }
 
-  console.log("FORM", user)
-
   const [ride, setRide] = useState(null)
   const [formState, setFormState] = useState(intialState)
 

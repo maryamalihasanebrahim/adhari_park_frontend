@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import '../styles/Nav.css'
+import { Link } from "react-router-dom"
+import "../styles/Nav.css"
 const Navbar = ({ user, handleLogout }) => {
   let userOptions
   if (user) {
@@ -21,13 +21,20 @@ const Navbar = ({ user, handleLogout }) => {
   }
   const publicOptions = (
     <nav className="nav">
+      <Link to="/" className="navDiv">
+        Home
+      </Link>
       <Link className="navDiv" to="/rides">
         rides
       </Link>
 
-      <Link to="/register" className="navDiv" >register</Link>
+      <Link to="/register" className="navDiv">
+        register
+      </Link>
 
-      <Link to="/login" className="navDiv" >login</Link>
+      <Link to="/login" className="navDiv">
+        login
+      </Link>
     </nav>
   )
   return <header>{user ? userOptions : publicOptions}</header>

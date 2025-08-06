@@ -10,7 +10,7 @@ import Form from "./components/Booking"
 import RideDetails from "./components/RideDetails"
 import ViewBookings from "./components/ViewBookings"
 import ViewBooking from "./components/ViewBooking"
-
+import Home from "./components/Home"
 function App() {
   const [user, setUser] = useState(null)
 
@@ -42,6 +42,7 @@ function App() {
           <Route path="/bookings/new/:id" element={<Form user={user} />} />
           <Route path="/bookings" element={<ViewBookings />} />
           <Route path="/bookings/:id" element={<ViewBooking />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </main>
     </>
