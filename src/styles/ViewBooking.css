@@ -1,0 +1,43 @@
+.viewbooking {
+  display: flex;
+  align-items: center;
+  background-color: #fffefd;
+  padding: 30px;
+}
+
+.imageOfRide {
+  width: 400px;
+  height: 400px;
+  margin-right: 20px;
+}
+
+.bookinginfo h2 {
+  margin-bottom: 16px;
+  color: #000000;
+  font-size: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.bookinginfo p {
+  font-size: 20px;
+  text-align: left;
+  color: #000000;
+}
+
+.bookinginfo button {
+  background-color: #bfe7e5;
+  color: white;
+  padding: 10px;
+}
+
+.cancelbtn {
+  padding: 5px;
+}
+
+.backbtn {
+  padding: 5px;
+}
+
+.bookinginfo button:hover {
+  background-color: #62cdcf;
+}

@@ -23,12 +23,14 @@ const ViewBookings = () => {
   if (!bookings) return <div>loading...</div>
 
   return (
-    <ul>
-      <h2>my bookings </h2> <br></br>
-      {bookings &&
-        bookings.map((booking) => (
-          <BookingDetails key={booking.id} booking={booking} rides={rides} />
-        ))}
+    <ul className='list'>
+      <div className="allinfo">
+        <h2>my bookings </h2> <br></br>
+        {bookings &&
+          bookings.map((booking) => (
+            <BookingDetails key={booking.id} booking={booking} rides={rides} />
+          ))}
+      </div>
     </ul>
   )
 }
