@@ -11,8 +11,7 @@ const Home = () => {
           Yara
         </p>
         <button id="loginButton" onClick={() => navigate('/login')}>
-          <img src="./src/images/ticket.png" alt="" width="50px" />
-
+          <img src="./src/images/ticket.png" alt="" width="300px" />
         </button>
       </div>
     </>

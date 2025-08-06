@@ -11,16 +11,11 @@
   flex-direction: column;
   align-items: center;
 }
-
 #loginButton {
-  font-family: 'Nunito', sans-serif;
-  color: #fffdfa;
-  font-size: 20px;
-  background-color: #e6b6d1;
+  background-color: rgba(255, 0, 0, 0);
 }
-
 #loginButton:hover {
-  background-color: #e69ac5;
+  opacity: 50%;
 }
 
 h1 {
