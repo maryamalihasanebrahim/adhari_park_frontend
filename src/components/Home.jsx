@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <p> home page</p>
-      <button onClick={() => navigate("/login")}>Login!</button>
+      <button onClick={() => navigate("/login")}>login!</button>
     </>
   )
 }

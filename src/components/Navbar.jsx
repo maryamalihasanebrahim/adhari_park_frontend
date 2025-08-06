@@ -22,7 +22,7 @@ const Navbar = ({ user, handleLogout }) => {
   const publicOptions = (
     <nav className="nav">
       <Link to="/" className="navDiv">
-        Home
+        home
       </Link>
       <Link className="navDiv" to="/rides">
         rides
